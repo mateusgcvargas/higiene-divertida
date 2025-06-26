@@ -1,0 +1,54 @@
+.hi{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#smileys{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#btncont{
+    width: auto;
+    margin-top: 20px;
+}
+
+#pergunta1{
+    margin-top: 30px;
+}
+
+#input1{
+    margin-top: 30px;
+}
+
+#mtotriste{
+    max-width: 50px;
+    max-height: 50px;
+}
+
+#triste{
+    max-width: 50px;
+    max-height: 50px;    
+}
+
+#neutro{
+    max-width: 50px;
+    max-height: 50px;    
+}
+
+#feliz{
+    max-width: 50px;
+    max-height: 50px;    
+}
+
+#mtofeliz{
+    max-width: 50px;
+    max-height: 50px;    
+}
+
+#fakeslider{
+    width: auto;
+    height: auto;
+    max-width: 400px;
+    max-height: 80px;
+}
