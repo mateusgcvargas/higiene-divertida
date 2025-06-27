@@ -8,28 +8,37 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Navbar do nome do aplicativo -->
-  <nav class="navbar bg-primary text-white justify-content-center">
-    <span class="navbar-brand mb-0 h1">Higiene Divertida</span>
-  </nav>
+  <!-- Cabeçalho com nome -->
+  <header>
+    <nav class="navbar navbar-light justify-content-center ">
+      <span class="navbar-brand mb-0 h1 ">Higiene Divertida</span>
+    </nav>
+  </header>
+
+  <!-- Título -->
   <h1 class="text-center mt-4">Escolha Seu Personagem</h1>
 
-    <!-- selecao de personagem -->
-
-   <h1>Escolha seu personagem</h1>
-  <div>
+  <!-- Seleção de Personagem -->
+  <div class="text-center mt-3">
     <span class="seta" onclick="mudarPersonagem(-1)">⬅</span>
-    <img id="personagem" src="personagem1.png" alt="Personagem">
+    <img id="personagem" src="personagem1.png" alt="Personagem" />
     <span class="seta" onclick="mudarPersonagem(1)">➡</span>
   </div>
 
-    <button id="start" onclick="iniciarJogo()">
-        <img src="start" alt="inicioplay">
+  <!-- Botão de iniciar o jogo -->
+  <div class="text-center mt-4">
+    <button id="start" onclick="iniciarJogo()" class="btn ">
+      <img src="start.png" alt="Iniciar Jogo" />
     </button>
- 
-    <!-- controle dos pais  -->
-    <img src="controlepais" alt="controle_dos_pais" >
-    <link rel="stylesheet" href=".\controlepais.html">
-    <script src="script.js"></script>
+  </div>
+
+  <!-- Controle dos Pais -->
+  <div class="text-center mt-4">
+    <a href="/salacuidar/index.html">
+      <img src="controlepais.png" alt="Controle dos Pais" style="width: 150px;" />
+    </a>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
