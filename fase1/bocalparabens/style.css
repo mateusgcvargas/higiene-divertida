@@ -1,0 +1,17 @@
+.hi{
+    margin-top: 20px;
+}
+
+.pia{
+    margin-top: 20px;
+    size: 10px;
+    width: auto;
+    height: auto;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+#btncont{
+    width: auto;
+    margin-top: 40px;
+}
