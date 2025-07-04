@@ -1,0 +1,55 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:"Passion One", sans-serif;
+}
+
+#body {
+  background-color:#faf8da; 
+  color:#215d76;
+  font-family:"Passion One", sans-serif;
+ 
+}
+
+/* Navbar com título */
+.navbar {
+  background-color:#215d76;
+  padding: 20px 0;
+  width: 100%;
+  height: 100px;
+  
+  
+}
+#navbar{
+    color: #faf8da;
+    
+    font-size: 2rem !important;
+    
+}
+#personagem{
+    margin-top: 20px;
+    size: 10 px;
+    width: auto;
+    height: auto;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+#start img {
+  width: 130px;
+  height: 130px;
+}
+
+/* Ícone do controle dos pais */
+img[alt="Controle dos Pais"] {
+  width: 80px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+.seta {
+  width: 60px;
+  height: auto;
+}
