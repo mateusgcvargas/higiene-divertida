@@ -1,14 +1,15 @@
-/* Reset básico */
+/* Reset básico
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Passion One", sans-serif;
-}
+  
+} */
 
 #body {
   background-color: #faf8da;
   color: #215d76;
+  font-family: "Passion One", sans-serif;
 }
 
 /* Navbar */
@@ -20,13 +21,15 @@
 #navbrand {
   color: #faf8da;
   font-size: 43px;
-  font-weight: 700;
+  
+ 
 }
 
 /* Título */
 #desc {
-  font-size: 40px;
+  font-size: 50px;
   color: #215d76;
+  margin-top: 10px;
 }
 
 /* Personagem */
