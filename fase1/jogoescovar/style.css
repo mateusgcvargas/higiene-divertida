@@ -87,6 +87,9 @@ body{
 #title{
     margin-top: 40px;
     font-size: 50px;
+    background-color: #215d76;
+    border-radius: 15px;
+    padding:1rem 2rem ;
 }
 
 #desc{
