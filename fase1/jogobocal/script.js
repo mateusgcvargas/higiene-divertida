@@ -87,3 +87,9 @@ document.addEventListener("touchend", () => {
     isDragging = false;
     cancelHoldCheck();
 });
+
+function playAudio() {
+    const audio = document.getElementById('bg-audio');
+    audio.play();
+    document.getElementById('playBtn').style.display = 'none'; // esconde o botão após tocar
+}
