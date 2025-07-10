@@ -90,6 +90,7 @@ body{
     background-color: #215d76;
     border-radius: 15px;
     padding:1rem 2rem ;
+    color: #faf8da;
 }
 
 #desc{
@@ -102,6 +103,7 @@ body{
     height: auto;
     max-width: 200px;
     max-height: 200px;
+    margin-bottom: 20px;
 }
 
 #navbar{
@@ -118,9 +120,6 @@ body{
     max-width: 150px;
     max-height: 150px;
     margin-top: 40px;
-}
 
-#col1{
-    max-width: 300px;
-    max-height: 300px;
+
 }
