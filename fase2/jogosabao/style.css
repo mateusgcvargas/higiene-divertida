@@ -22,9 +22,9 @@ body{
 }
 
 
-#sabonete{
-    max-width: 100px;
-    max-height: 100px;
+#object{
+    max-width: 110px;
+    max-height: 110px;
     margin-top: 40px;
 }
 .personagemEscolhido{
