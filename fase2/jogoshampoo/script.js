@@ -1,3 +1,8 @@
+function playAudio() {
+    const audio = document.getElementById('bg-audio');
+    audio.play();
+    document.getElementById('playBtn').style.display = 'none'; // esconde o botão após tocar
+}
 const object = document.getElementById("object");
 const pia = document.querySelector(".personagemEscolhido");
 

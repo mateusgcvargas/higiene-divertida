@@ -14,17 +14,12 @@
 /* Navbar */
 #navbar {
   background-color: #215d76;
-  padding: 20px 0;
 }
 
 #navbrand {
   color: #faf8da;
   font-size: 43px;
-  font-weight: 700;
   text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 /* Título */

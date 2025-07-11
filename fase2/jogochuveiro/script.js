@@ -1,39 +1,92 @@
-function dragstart_inicio() {
-    const chuveiro = document.getElementById("chuveiro");
-    const personagem = document.getElementById("personagemEscolhido");
-
-    // O CHUVEIRO é arrastado
-    chuveiro.addEventListener("dragstart", arrastando);
-
-    // O PERSONAGEM é o alvo de drop
-    personagem.addEventListener("dragover", permitirSoltar);
-    personagem.addEventListener("drop", enxaguacao);
+function playAudio() {
+  const audio = document.getElementById('bg-audio');
+  audio.play();
+  document.getElementById('btncont').style.display = 'none';
 }
 
-function arrastando(event) {
-    event.dataTransfer.setData("text", event.target.id);
+const object = document.getElementById("object");
+const personagem = document.getElementById("personagemEscolhido");
+
+let isDragging = false;
+let offsetX = 0;
+let offsetY = 0;
+let holdTimer = null;
+
+function isOverlapping(obj1, obj2) {
+  const rect1 = obj1.getBoundingClientRect();
+  const rect2 = obj2.getBoundingClientRect();
+
+  return !(
+    rect1.right < rect2.left ||
+    rect1.left > rect2.right ||
+    rect1.bottom < rect2.top ||
+    rect1.top > rect2.bottom
+  );
 }
 
-function permitirSoltar(event) {
-    event.preventDefault();
+function startHoldCheck() {
+  if (holdTimer) return;
+
+  holdTimer = setTimeout(() => {
+    window.location.href = "/fase2/parabenschuveiro/index.html";
+  }, 5000);
 }
 
-function enxaguacao(event) {
-    event.preventDefault();
-    const id = event.dataTransfer.getData("text");
-
-    if (id === "chuveiro") {
-        const personagem = document.getElementById("personagemEscolhido");
-        personagem.style.filter = "brightness(1.2)";
-        personagem.style.transition = "filter 0.5s";
-
-        // Espera 2 segundos e vai para parabéns
-        setTimeout(() => {
-            personagem.style.filter = "none";
-            window.location.href = "parabens.html";
-        }, 2000);
-    }
+function cancelHoldCheck() {
+  if (holdTimer) {
+    clearTimeout(holdTimer);
+    holdTimer = null;
+  }
 }
 
-// Inicia o sistema ao carregar
-window.addEventListener("DOMContentLoaded", dragstart_inicio);
+function moveObject(x, y) {
+  object.style.left = x - offsetX + "px";
+  object.style.top = y - offsetY + "px";
+
+  if (isOverlapping(object, personagem)) {
+    startHoldCheck();
+  } else {
+    cancelHoldCheck();
+  }
+}
+
+// MOUSE
+object.addEventListener("mousedown", (e) => {
+  isDragging = true;
+  offsetX = e.clientX - object.getBoundingClientRect().left;
+  offsetY = e.clientY - object.getBoundingClientRect().top;
+  object.style.cursor = "grabbing";
+});
+
+document.addEventListener("mousemove", (e) => {
+  if (isDragging) {
+    moveObject(e.clientX, e.clientY);
+  }
+});
+
+document.addEventListener("mouseup", () => {
+  isDragging = false;
+  object.style.cursor = "grab";
+  cancelHoldCheck();
+});
+
+// TOUCH
+object.addEventListener("touchstart", (e) => {
+  isDragging = true;
+  const touch = e.touches[0];
+  offsetX = touch.clientX - object.getBoundingClientRect().left;
+  offsetY = touch.clientY - object.getBoundingClientRect().top;
+}, { passive: false });
+
+document.addEventListener("touchmove", (e) => {
+  if (isDragging) {
+    const touch = e.touches[0];
+    moveObject(touch.clientX, touch.clientY);
+    e.preventDefault();
+  }
+}, { passive: false });
+
+document.addEventListener("touchend", () => {
+  isDragging = false;
+  cancelHoldCheck();
+});

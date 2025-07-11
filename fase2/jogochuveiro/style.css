@@ -21,15 +21,30 @@ body {
   font-size: 45px;
 }
 
-#chuveiro {
+#object {
   max-width: 150px;
   max-height: 150px;
   margin-top: 40px;
   cursor: grab;
+  position: absolute;
 }
 
 #personagemEscolhido {
   margin-top: 20px;
   max-width: 300px;
   max-height: 300px;
+}
+
+#btncont {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #215d76;
+  color: #faf8da;
+  border: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  z-index: 999;
 }
