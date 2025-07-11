@@ -32,15 +32,18 @@ body{
     margin-bottom: 30px;
 }
 
-#btncont{
-    width: auto;
-    margin-top: 80px;   
-    background-color:#215d76;
-    color:#215d76;
-    border-color:#215d76 ;
-    border-left-width: 10px;
-    border-right-width: 10px;
-    font-size: 20px;
+#btncont {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #215d76;
+  color: #faf8da;
+  border: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  z-index: 999;
 }
 
 #pergunta1{
