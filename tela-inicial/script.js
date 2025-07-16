@@ -1,14 +1,18 @@
-let PersonagemeEscolhido = 1;
-const qtdPersonagem = 5;
+let PersonagemAtual = 1;
+const qtdPersonagem = 3;
 
 // funcao para trocar de personagem
 function trocarpersonagem(mudancapersonagem){
-    PersonagemeEscolhido += mudancapersonagem
-    if(PersonagemeEscolhido > qtdPersonagem ){
-        PersonagemeEscolhido =1
-    }else if(PersonagemeEscolhido < 1){
-        PersonagemeEscolhido = qtdPersonagem
+    PersonagemAtual += mudancapersonagem
+    if(PersonagemAtual > qtdPersonagem ){
+        PersonagemAtual =1
+    }else if(PersonagemAtual < 1){
+        PersonagemAtual = qtdPersonagem
 
     }
-    document.getElementById("personagem").src = `personagem${PersonagemeEscolhido}.png`;
+    document.getElementById("personagem").src = `personagem${PersonagemAtual}.png`;
+}
+function iniciarjogo() {
+  sessionStorage.setItem("personagemEscolhido", PersonagemAtual);
+  window.location.href = "../fase1/intro1/index.html";
 }

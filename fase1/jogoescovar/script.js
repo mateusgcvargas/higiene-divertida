@@ -1,3 +1,12 @@
+// funcao para personagem escolhido
+window.onload = function(){
+    const personagemEscolhido = sessionStorage.getItem("personagemEscolhido")
+    if (personagemEscolhido){
+        document.getElementById("pia").src = `personagem${personagemEscolhido}.png`
+    }else{
+        document.getElementById("pia").src = "personagem1.png"
+    }
+}
 const object = document.getElementById("object");
 const pia = document.getElementById("pia");
 
